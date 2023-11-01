@@ -43,7 +43,7 @@ class UserService{
             if(!response){
                 throw {error:'Invalid token'}
             }
-            const user=this.UserRepository.getById(response.id);
+            const user=  this.UserRepository.getById(response.id);
             if(!user){
                 throw{error:'No user with Corresponding token Exist'};
             }
